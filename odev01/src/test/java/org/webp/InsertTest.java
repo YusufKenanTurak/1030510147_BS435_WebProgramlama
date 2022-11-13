@@ -62,10 +62,17 @@ public class InsertTest {
 
         CURRENCY CURRENCY = new CURRENCY();
         CURRENCY.setID(1);
-        EXCHANGE EXCHANGE = new EXCHANGE();
-        EXCHANGE.setExchangeID(1);
 
         boolean persisted = persistInATransaction(CURRENCY);
+        assertTrue(persisted);
+    }
+    @Test
+    public void insertNETWORK() {
+
+        NETWORK NETWORK = new NETWORK();
+        NETWORK.setNetworkID(1);
+
+        boolean persisted = persistInATransaction(NETWORK);
         assertTrue(persisted);
     }
 

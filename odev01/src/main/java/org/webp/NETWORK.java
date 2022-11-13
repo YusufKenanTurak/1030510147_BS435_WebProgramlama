@@ -11,9 +11,10 @@ import javax.persistence.GeneratedValue;
 @Entity
 public class NETWORK {
 
+
+
     @Column(name = "NetworkID")
     @Id
-    @GeneratedValue
     private long NetworkID;
 
     @Column(name = "Name")
@@ -22,14 +23,13 @@ public class NETWORK {
     public NETWORK() {
     }
 
-    public Long getNetworkID() {
+    public long getNetworkID() {
         return NetworkID;
     }
 
-    public void setNetworkID(long NetworkID) {
-        this.NetworkID = NetworkID;
+    public void setNetworkID(long networkID) {
+        NetworkID = networkID;
     }
-
     public String getName() {
         return Name;
     }
