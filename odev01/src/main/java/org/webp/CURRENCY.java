@@ -1,6 +1,7 @@
-package org.example;
+package org.webp;
 
 
+import javax.persistence.GeneratedValue;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -16,12 +17,9 @@ public class CURRENCY {
     private int ID;
 
     @Column(name = "Name")
-    @NotBlank
-    @Size(max = 50)
     private String Name;
 
     @Column(name = "Price")
-    @Size(max = 50)
     private Long Price;
 
     @Column(name = "ExchangeID")

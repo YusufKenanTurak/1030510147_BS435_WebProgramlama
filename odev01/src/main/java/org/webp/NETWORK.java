@@ -1,10 +1,11 @@
-package org.example;
+package org.webp;
 
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.GeneratedValue;
 
 @Table(name = "NETWORK")
 @Entity
@@ -13,11 +14,9 @@ public class NETWORK {
     @Column(name = "NetworkID")
     @Id
     @GeneratedValue
-    private int NetworkID;
+    private long NetworkID;
 
     @Column(name = "Name")
-    @NotBlank
-    @Size(max = 50)
     private String Name;
 
     public NETWORK() {
@@ -27,7 +26,7 @@ public class NETWORK {
         return NetworkID;
     }
 
-    public void setNetworkID(int NetworkID) {
+    public void setNetworkID(long NetworkID) {
         this.NetworkID = NetworkID;
     }
 

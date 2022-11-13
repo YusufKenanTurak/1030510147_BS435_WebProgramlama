@@ -1,7 +1,10 @@
-package org.example;
+package org.webp;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
 
 @Table(name = "EXCHANGE")
 @Entity
@@ -13,13 +16,9 @@ public class EXCHANGE {
     private int ExchangeID;
 
     @Column(name = "Name")
-    @NotBlank
-    @Size(max=50)
     private String Name;
 
     @Column(name = "Country")
-    @NotBlank
-    @Size(max=50)
     private String Country;
 
     @Column(name = "NetworkID")
