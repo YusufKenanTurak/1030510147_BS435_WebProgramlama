@@ -11,9 +11,9 @@ import javax.persistence.Table;
 @Entity
 public class CURRENCY {
 
+
     @Column(name = "ID")
     @Id
-    @GeneratedValue
     private int ID;
 
     @Column(name = "Name")
@@ -23,13 +23,15 @@ public class CURRENCY {
     private Long Price;
 
     @Column(name = "ExchangeID")
-    private Long ExchangeID;
+    private int ExchangeID;
 
     @Column(name = "NetworkID")
     private int NetworkID;
 
     public CURRENCY() {
     }
+
+
 
     public int getID() {
         return ID;
@@ -39,6 +41,13 @@ public class CURRENCY {
         this.ID = ID;
     }
 
+    public int getExchangeID() {
+        return ExchangeID;
+    }
+
+    public void setExchangeID(int exchangeID) {
+        ExchangeID = exchangeID;
+    }
     public String getName() {
         return Name;
     }
@@ -55,11 +64,11 @@ public class CURRENCY {
         this.Price = Price;
     }
 
-    public Long getExchangesID() {
+    public int getExchangesID() {
         return ExchangeID;
     }
 
-    public void setExchangesID(Long ExchangeID) {
+    public void setExchangesID(int ExchangeID) {
         this.ExchangeID = ExchangeID;
     }
 

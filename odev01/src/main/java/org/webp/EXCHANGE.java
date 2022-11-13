@@ -10,9 +10,10 @@ import javax.persistence.GeneratedValue;
 @Entity
 public class EXCHANGE {
 
+
+
     @Column(name = "ExchangeID")
     @Id
-    @GeneratedValue
     private int ExchangeID;
 
     @Column(name = "Name")
@@ -27,14 +28,14 @@ public class EXCHANGE {
 
     public EXCHANGE(){}
 
+
     public int getExchangeID() {
         return ExchangeID;
     }
 
-    public void setExchangeID(int CompanyID) {
-        this.ExchangeID = ExchangeID;
+    public void setExchangeID(int exchangeID) {
+        ExchangeID = exchangeID;
     }
-
     public String getName() {
         return Name;
     }
